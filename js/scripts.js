@@ -15,6 +15,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
+    
+
+
     // Shrink the navbar 
     navbarShrink();
 
@@ -43,4 +46,26 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevents default form submission
+
+    let emailInput = document.getElementById("emailAddress").value.trim();
+    let successMessage = document.getElementById("submitSuccessMessage");
+    let errorMessage = document.getElementById("submitErrorMessage");
+    let emailError = document.getElementById("emailError");
+
+    // Validate email using regex
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (emailPattern.test(emailInput)) {
+        successMessage.classList.remove("d-none"); // Show success message
+        errorMessage.classList.add("d-none"); // Hide error message
+        emailError.classList.add("d-none"); // Hide email error
+    } else {
+        errorMessage.classList.remove("d-none"); // Show error message
+        successMessage.classList.add("d-none"); // Hide success message
+        emailError.classList.remove("d-none"); // Show email validation error
+    }
 });
