@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Yatra Setu</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Molle:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">Yatra Setu</a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#signup">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ensure redirection happens immediately
+        if (!localStorage.getItem("loggedIn")) {
+          window.location.href = "login.html"; // Redirect
+        }
+
+        // Logout function
+        let logoutButton = document.getElementById("logout");
+        if (logoutButton) {
+          logoutButton.addEventListener("click", function () {
+            localStorage.removeItem("loggedIn"); // Remove login status
+            localStorage.setItem(
+              "logoutMessage",
+              "You have been logged out successfully!"
+            );
+            window.location.href = "login.html"; // Redirect to login page
+          });
+        }
+      });
+    </script>
+
+    <!-- Masthead-->
+    <header class="masthead">
+      <div
+        class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center"
+      >
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Plan Your Trip</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">
+              "Discover, Explore, Experience – Your Next Adventure Awaits!"
+            </h2>
+            <a class="btn btn-primary" href="#about">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- About-->
+    <section class="about-section text-center" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <h2
+              class="fw-bold mb-4"
+              style="font-family: 'Molle', cursive; color: #aca8a7"
+            >
+              "Connecting You to Unforgettable Destinations!"
+            </h2>
+
+            <p class="text-white-50 lead">
+              Yatra Setu is a modern and intuitive travel platform designed to
+              make your journey seamless and memorable. Built with cutting-edge
+              web technologies, our platform provides a user-friendly
+              experience, allowing travelers to explore, plan, and book their
+              dream vacations with ease.
+            </p>
+            <p class="text-white-50">
+              Whether you're a solo explorer, a family vacationer, or an
+              adventure seeker, Yatra Setu bridges the gap between your travel
+              dreams and reality. With <strong>exclusive travel deals</strong>,
+              <strong>handpicked destinations</strong>, and
+              <strong>personalized itineraries</strong>, we ensure every trip is
+              hassle-free and unforgettable.
+            </p>
+            <p class="text-white-50">
+              Yatra Setu is a
+              <strong>fully responsive travel website</strong> crafted for both
+              desktop and mobile users, ensuring a smooth experience across all
+              devices. From finding the best accommodations to discovering
+              hidden gems, our goal is to be your ultimate travel companion.
+            </p>
+            
+
+            <p class="text-white-50 mt-4">
+              Yatra Setu is your bridge to boundless journeys.
+              <a
+                
+                class="text-info"
+                >Explore below !</a
+              >
+            </p>
+          </div>
+        </div>
+        <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+      </div>
+    </section>
+    <!-- Projects-->
+
+    <section class="projects-section bg-light pt-3" id="projects"> 
+      <div class="container px-4 px-lg-5">
+        <div class="container mt-5"> 
+          <h4 class="fw-bold text-center text-black mb-3">
+            Why Choose Yatra Setu?
+          </h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card text-white bg-dark shadow-lg p-3 rounded-4">
+                <div class="card-body text-center">
+                  <i class="fas fa-map-marked-alt fa-2x text-warning mb-3"></i>
+                  <h5 class="card-title fw-bold">Curated Travel Experiences</h5>
+                  <p class="card-text">
+                    Explore handpicked destinations and unique itineraries.
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+              <div class="card text-white bg-dark shadow-lg p-3 rounded-4">
+                <div class="card-body text-center">
+                  <i class="fas fa-plane-departure fa-2x text-success mb-3"></i>
+                  <h5 class="card-title fw-bold">Seamless Booking</h5>
+                  <p class="card-text">
+                    Hassle-free reservations for flights, hotels, and local experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-4">
+              <div class="card text-white bg-dark shadow-lg p-3 rounded-4">
+                <div class="card-body text-center">
+                  <i class="fas fa-tags fa-2x text-danger mb-3"></i>
+                  <h5 class="card-title fw-bold">Exclusive Deals</h5>
+                  <p class="card-text">
+                    Get the best prices on your next adventure.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <div class="card text-white bg-dark shadow-lg p-3 rounded-4">
+                <div class="card-body text-center">
+                  <i class="fas fa-laptop-code fa-2x text-primary mb-3"></i>
+                  <h5 class="card-title fw-bold">User-Friendly Interface</h5>
+                  <p class="card-text">
+                    Built with modern web technologies for fast and easy navigation.
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-6">
+              <div class="card text-white bg-dark shadow-lg p-3 rounded-4">
+                <div class="card-body text-center">
+                  <i class="fas fa-user-check fa-2x text-info mb-3"></i>
+                  <h5 class="card-title fw-bold">Personalized Recommendations</h5>
+                  <p class="card-text">
+                    Tailored travel plans based on your <br>preferences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="projects-section bg-light" id="projects">
+          <div class="container px-4 px-lg-5">
+        <!-- Featured Project Row-->
+        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+          <div class="col-xl-8 col-lg-7">
+            <img
+              class="img-fluid mb-3 mb-lg-0"
+              src="assets/img/bg-masthead.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-xl-4 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <h4>Shoreline Escapes</h4>
+              <p class="text-black-50 mb-0">
+                Let the sound of the waves and golden sands take you on a journey of relaxation. Yatra Setu brings you the most breathtaking beachfront destinations, handpicked for your ultimate escape.
+              </p>
+            </div>
+          </div>
+          </div>
+          <!-- Project One Row-->
+          <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6">
+              <img
+                class="img-fluid"
+                src="assets/img/demo-image-01.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="col-lg-6">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div
+                    class="project-text w-100 my-auto text-center text-lg-left"
+                  >
+                    <h4 class="text-white">Mystic Forest Retreats</h4>
+                    <p class="mb-0 text-white-50">
+                      Discover the hidden wonders of lush green forests, where adventure meets tranquility. Yatra Setu curates the best eco-tourism spots, perfect for nature lovers and thrill-seekers alike.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- Project Two Row-->
+          <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6">
+              <img
+                class="img-fluid"
+                src="assets/img/demo-image-02.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="col-lg-6 order-lg-first">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div
+                    class="project-text w-100 my-auto text-center text-lg-right"
+                  >
+                    <h4 class="text-white">Majestic Mountain Trails</h4>
+                    <p class="mb-0 text-white-50">
+                      Conquer the peaks and witness breathtaking landscapes with our exclusive mountain adventure guides. Whether you seek peace or adrenaline, Yatra Setu has the perfect itinerary for you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+         
+
+          <!-- Project One Row-->
+          <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6">
+              <img
+                class="img-fluid"
+                src="assets/img/demo-image-03.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="col-lg-6">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div
+                    class="project-text w-100 my-auto text-center text-lg-left"
+                  >
+                    <h4 class="text-white">Enchanted Misty Highlands</h4>
+                    <p class="mb-0 text-white-50">
+                      Immerse yourself in the mystical beauty of fog-covered highlands. Yatra Setu brings you closer to nature's breathtaking landscapes, offering serene escapes into the heart of untouched wilderness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+            <form
+              class="form-signup"
+              id="contactForm"
+              data-sb-form-api-token="API_TOKEN"
+            >
+              <!-- Email address input-->
+              <div class="row input-group-newsletter">
+                <div class="col">
+                  <input
+                    class="form-control"
+                    id="emailAddress"
+                    type="email"
+                    placeholder="Enter email address..."
+                    aria-label="Enter email address..."
+                    data-sb-validations="required,email"
+                  />
+                </div>
+                <div class="col-auto">
+                  <button
+                    class="btn btn-primary disabled"
+                    id="submitButton"
+                    type="submit"
+                  >
+                    Notify Me!
+                  </button>
+                </div>
+              </div>
+              <div
+                class="invalid-feedback mt-2"
+                data-sb-feedback="emailAddress:required"
+              >
+                An email is required.
+              </div>
+              <div
+                class="invalid-feedback mt-2"
+                data-sb-feedback="emailAddress:email"
+              >
+                Email is not valid.
+              </div>
+
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3 mt-2 text-white">
+                  <div class="fw-bolder">Form submission successfully done <br>and <br>sent to yatrasetu !</div>
+                  
+                  <br />
+                  
+                  
+                </div>
+              </div>
+              
+              <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3 mt-2">
+                  Error sending message!
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact-->
+    <section class="contact-section bg-black">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Address</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">
+                  4923 Market Street, Bengluru
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-envelope text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Email</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">
+                  <a href="#!">YatraSetu@Email.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                <h4 class="text-uppercase m-0">Phone</h4>
+                <hr class="my-4 mx-auto" />
+                <div class="small text-black-50">+91 9019130022</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+          <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+          <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+          <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">
+        Copyright &copy; YatraSetu 2025
+      </div>
+    </footer>
+
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
